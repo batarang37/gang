@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Demo</title>
+    <link type="text/css" rel="stylesheet" href="try.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"> </script>
+</head>
+    <body>
+        <div id="header">
+            Testpal 
+        </div>
+        <div id="container" >
+            <div id="first"  class="zero" flag="true">
+                <h1 style="font-size: 1.5rem;position:relative;top:7%;text-align: center;">Share your name...</h1><br>
+                <input type="text" id="name" placeholder="Name" /><br><br>
+                <p style="font-size: 0.5rem;text-align: center;"id="comment"></p>
+                <input type="button" value="Confirm" id="confirm"/>
+              
+            </div> 
+            <div id="second"    class="zero"  style="text-align:center" flag="true"> 
+                <h1 style="font-size:1.5rem;position:relative;top:9%;text-align: center;">How was your day?</h1><br>
+                <br><br>
+                <input type="radio" name="fnf"value="fine" id="fine"/>
+                <label for="fine" style="font-size: 1rem;position: relative; top:-13%;left: -2%;">Fine</label><br><br>
+                <input type="radio" name="fnf"value="not fine" id="nfine"/>
+                <label for="not fine" style="font-size: 1rem; position: relative;top:-16%;">Not Fine</label>
+                <p style="font-size: 1rem;text-align: center;position: relative;top: -15%;"id="comment2"></p>
+            </div>
+            <div id="third" class="zero" style="text-align:center;font-family:cursive" flag="true"><!--Austim/Dyspraxia-->
+                <h1 id="frhead" style="font-size: 1.5rem;position:relative;top:9%;text-align: center;">Do you have friends?</h1><br>
+                <br><br>
+                <input type="radio" name="fr1"value="fyes" id="fyes" />
+                <label for="fyes" style="font-size: 1rem;position: relative;top:-13%;">Yes</label><br><br>
+                <input type="radio" name="fr1"value="fno" id="fno"/>
+                <label for="fno" style="font-size: 1rem;position: relative;top:-16%;">No</label>
+                <p style="font-size: 1rem;text-align: center;position: relative;top: -15%;"id="comment3"></p>
+            </div>
+
+            <div id="fourth" class="zero" flag="true"><!--Dyscalculia-->
+                <h1 style="font-size: 1.5rem;position:relative;top:9%;text-align: center;">Pick the shape:Rectangle</h1><br>
+                <br><br>
+                <div style="display: flex; justify-content:center; align-items: center;position: relative;top:-8%"id="shape">
+                    <input type="radio" name="shapes"value="square" id="sq" style=" width: 0.7rem;height: 0.7rem; "/>
+                    <div id="square" style="width: 4rem; height: 4rem; background-color:  #68db65; "></div>
+                    <input type="radio" name="shapes"value="rectangle" id="rec"style=" width: 0.7rem;height: 0.7rem; "/>
+                    <div id="rectangle" style="width: 6rem; height: 4rem; background-color:  #68db65;"></div>
+                    <input type="radio" name="shapes"value="triangle" id="tri" style=" width: 0.7rem;height: 0.7rem;"/>
+                    <div  id="triangle" style="width:0px;height: 0px;border-top: 0px;border-left: 2rem solid white;border-right:2rem solid white;border-bottom: 4rem solid #68db65;"></div>                       
+ 
+                </div>
+            </div>
+            <div id="five" class="zero" flag="true"><!--Dyscalculia/Dysgraphia-->
+                <h1 style="font-size: 1.5em;position:relative;top:9%;text-align: center;">Identify the pink coloured square</h1>
+                <br><br><br>
+                <div style=" display:flex; justify-content: center;align-items: center;position: relative;top: -8%;">
+                    <input type="radio" name="colour"value="red" id="rsq" style=" width: 0.7rem;height: 0.7rem;"/>
+                    <div id="rsquare" style="width: 4rem; height: 4rem; background-color:  red; "></div>
+                    <input type="radio" name="colour"value="pink" id="psq"style=" width: 0.7rem;height: 0.7rem;"/>
+                    <div id="psquare" style="width: 4rem; height: 4rem; background-color:  palevioletred;"></div>
+                    <input type="radio" name="colour"value="green" id="gsq" style=" width: 0.7rem;height: 0.7rem;"/>
+                    <div  id="gsquare" style="width:4rem;height: 4rem;background-color:green;"></div>
+                    <input type="radio" name="colour"value="yellow" id="ysq" style=" width: 0.7rem;height: 0.7rem;"/>
+                    <div id="ysquare" style="width: 4rem; height: 4rem;background-color:  yellow; "></div>    
+                </div>
+                
+            </div>
+            <div id="six" class="zero" flag="true"><!--Dysgraphia-->
+                <h1 style="font-size: 1.5rem;position:relative;top:9%;text-align: center;">Write the name of the fruit in the image</h1>
+                <br><br><br>
+                <img src="banana.svg" draggable="false" style="width: 3rem; height: 3rem; transform: rotate(-60deg);position: relative;top:-16% ;left: 48%; ">
+                <input type="text" id="fruit" placeholder="FruitName"/><br><br>
+                <p style="font-size: 0.5rem;text-align: center;position: relative;top:-10%;"id="comment6"></p>
+                <input type="button" value="Confirm" id="confirm2"/>
+            </div>
+            <div id="seven" flag="true" class="zero"><!--Dyscalculia-->
+                <h1 style="font-size: 1.5rem;position:relative;top:9%;text-align: center;">Guess the time in the clock image</h1>
+                <img src="clock1.svg" draggable="false" style="width: 17%; height:17%; position: relative;top:5%;left: 43%;">                
+                <div style="text-align: center; position: relative; top:10%;">
+                    <input type="radio" name="clock"value="230"  style=" width: 0.7rem;height: 0.7rem;"/>
+                    <label for="230" style="font-size:0.8rem;">2:30-2:35</label>
+                    <input type="radio" name="clock"value="330" style=" width: 0.7rem;height: 0.7rem;"/>
+                    <label for="330" style="font-size: 0.8rem;">3:30-3:35</label>
+                    <input type="radio" name="clock"value="240"  style=" width: 0.7rem;height: 0.7rem;"/>
+                    <label for="240" style="font-size: 0.8rem">2:40-2:45</label>
+                    <input type="radio" name="clock"value="340"  style=" width: 0.7rem;height: 0.7rem;"/>
+                    <label for="340" style="font-size: 0.8rem">3:40-3:45</label>
+                    
+                </div>
+            </div>
+            <div id="eight"   class="zero" flag="true" style="overflow: hidden;"><!--Dyscalculia-->
+                <h1 style="font-size: 1.5rem;position:relative;top:9%;text-align: center;">Solve the given problem</h1>
+                <div style="font-size: 1rem;text-align: center;position: relative;top:8%;font-weight: bolder;">15+12-25</div>
+                <div style="text-align: center; position: relative; top:15%;">
+                    <input type="radio" name="math"value="7"  style=" width: 0.7rem;height: 0.7rem;"/>
+                    <label for="7" style="font-size:0.8rem;">7</label>
+                    <input type="radio" name="math"value="4" style=" width: 0.7rem;height: 0.7rem;"/>
+                    <label for="4" style="font-size: 0.8rem;">4</label>
+                    <input type="radio" name="math"value="2"  style=" width: 0.7rem;height: 0.7rem;"/>
+                    <label for="2" style="font-size: 0.8rem">2</label>
+                    <input type="radio" name="math"value="9"  style=" width: 0.7rem;height: 0.7rem;"/>
+                    <label for="9" style="font-size: 0.8rem">9</label>
+                    
+                </div>
+            </div>
+            <div id="nine" class="zero" flag="true" style="overflow: hidden;"><!--Dyslexia/austim-->
+                <h1 style="font-size: 1.5rem;position:relative;top:9%;text-align: center;"id="wordheader">Just read the word:Helicopter</h1>
+                <input type="button" class="speakbtn"style="width: 4rem; height:4rem ; border-radius:50%;position: relative; top:8%;left:45%; background-color:  #68db65; font-family: cursive; font-size:0.5rem; font-weight: bolder;  border:none; 
+                cursor:pointer; transition: 0.2s all;" value="Click to Speak" id="speakword" >
+                <p style="font-size: 1rem;text-align: center; position:relative;top:7%;left: 1%;"id="comment9"></p>
+    
+            </div>
+            <div id="ten" class="zero"  flag="true"  ><!--Dyslexia/austim-->
+                <h1 style="font-size: 1.3rem;position:relative;top:11%;text-align: center; "id="senheader">Just read the sentence:Cat sat on the mat</h1>
+                <input type="button" class="speakbtn"style="width: 4rem ; height: 4rem; position: relative; top:12%;left:45%; border-radius: 50%;background-color:  #68db65; font-family: cursive; font-size: 0.5rem; font-weight: bolder;  border:none; 
+                cursor:pointer; transition: 0.2s all;" value="Click to Speak" id="speaksen">
+                 <p style="font-size: 1rem;text-align: center; position:relative;top:7%;left: 1%;"id="comment10"></p>
+            </div>
+            <div id="eleven" class="zero" flag="true" >
+               
+                <h1 style="font-size: 1.3rem;position:relative;top:11%;text-align: center;">Write any number which ends with nine</h1>
+                <input type="text" id="num" placeholder="Number">
+                <p style="font-size: 0.5rem;text-align: center;position: relative;top: 13%;"id="comment7"></p> 
+                <input type="button" value="Confirm" id="confirm3"/>
+                
+            </div>
+            <div id="twelve" class="zero" flag="true" >
+                <h1 style="font-size: 1.3rem;position:relative;top:11%;text-align: center;">Is there any problem which makes you stress</h1>
+                <div id="stressyn" style="text-align: center; position:  relative; top:10%">
+                    <input type="radio" name="stress"value="syes" id="syes"/>
+                    <label for="syes" style="font-size: 1rem;">Yes</label><br><br>
+                    <input type="radio" name="stress"value="sno" id="sno"/>
+                    <label for="sno" style="font-size: 1rem;position: relative;top:-0.5rem">No</label>
+                    <p style="font-size: 1rem;text-align: center;position: relative;top: 13%;"id="comment8"></p> 
+                </div>    
+            </div>
+            <div id="thirt" class="zero"  flag="true">
+                <h1 style="font-size: 1.2rem;position:relative;top:11%;text-align: center;">If anyone approaches you to hug what will you do?</h1>
+                <div id="huggdiv" style="text-align: center; position:  relative; top:13%; left:3%;">
+                    <input type="radio" name="hug"value="hugall" id="hugall" />
+                    <label for="hugall" style="font-size: 0.8rem; "> &nbsp;&nbsp;I will hug them</label><br><br>
+                    
+                    
+                    <input type="radio" name="hug"value="hugno" id="hugno"/>
+                    <label for="hugno" style="font-size: 0.8rem; position:relative;">I won't hug them</label>
+
+
+                </div>  
+              
+                
+            </div>
+            <div id="fourt" class="zero" flag="true">
+                <h1 style="font-size: 1.2rem;position:relative;top:11%;text-align: center;">Listen the audio and write the sentence</h1>
+                <audio  id="audio">
+                    
+                    <source src="box.mp3" type="audio/mpeg">
+                    
+                </audio>
+               
+                <input type="button" value="Click to Listen" class="speakbtn"id="audiobtn"style="width: 4rem ; height: 4rem; position: relative; left:45%;border-radius: 50%;background-color:  #68db65; font-family: cursive; font-size: 0.5rem; font-weight: bolder;  border:none; 
+                cursor:pointer; display:relative;top:10%;transition: 0.2s all;"  /><br><br>
+                <input type="text" id="auname" placeholder="Write the sentence"/>
+                <p style="font-size: 0.5rem;text-align: center; position:relative;top:3%;left: 1%;"id="comment11"></p>
+                <input type="button" value="Confirm" id="confirm4"/>
+               
+            </div>
+            <div id="fivet" class="zero" flag="true" >
+                <h1 id="timeheader"style="font-size: 1.3rem;position:relative;top:11%;text-align: center;">Understand the passage within 3 minutes</h1>
+                <input type="button" id="passagebtn" value="start"/>
+                <h1 id="timeout" style="text-align:center; position: relative;top: 5%; color:blue;font-size:1.5rem;">3:00</h1>
+                <div id="qndiv"style="width: 70%;max-height:40%;overflow:hidden; background-color: #68db65; padding: 20px; position: relative ; left: 15%;">
+                    <p style="font-weight: bolder; font-size: 0.5rem;">When his parents are killed, <b style="color: purple;">billionaire playboy Bruce Wayne</b> relocates to Asia, where he is mentored by<b style="color: purple;">Henri Ducard and Ra's Al Ghul </b> in how to fight evil. When learning about the plan to wipe out evil in<b style="color: purple;"> Gotham City </b>by Ducard, Bruce prevents this plan from getting any further and heads back to his home. Back in his original surroundings, Bruce adopts the image of a bat to strike fear into the criminals and the corrupt as the icon known as <b style="color:purple;">"Batman".</b></p>
+                </div>
+            </div>
+            <div id="sixteen" class="zero" flag="true"  >
+                <h1 style="font-size: 1.3rem;position:relative;top:9%;text-align: center;">Just show your hand like this</h1>
+                <img src="hand.svg" id="hand" draggable="false" style="width: 17%; height:17%;position: relative;top:8%;left: 42%;">
+                <input type="button" value="Click to show" id="show">
+            </div>
+            <div id="seventeen" class="zero"  flag="true">
+                <h1 style="font-size: 1.3rem;position:relative;top:3%;text-align: center;"id="l/r">Listen and repeat the sentence</h1>
+                <input type="button" value="Listen" id="Listen">
+                <audio  id="audio2">
+                    
+                    <source src="Hello.mp3" type="audio/mpeg">
+                    
+                </audio>
+                <input type="button" value="Speak" id="speaks">
+                <p style="font-size: 1.2rem;position:relative;top:20%;text-align: center;"id="comment12"></p>
+            </div>
+            <div id="eighteen" class="zero" flag="true">
+                <div style="visibility:hidden;position: relative;top: 20%;" id="hiddendiv" ></div>
+                <h1 style="font-size: 1.3rem;position:relative;top:3%;text-align: center;"id="l/read">Listen the audio and read the sentence simultaneously</h1>
+                <p style="font-size: 1rem;width:70%;position:relative;background-color:#68db65;top:10%;left:15%;text-align: center;visibility: hidden;"id="reader">Love birds chirping outside the window</p>
+               <input type="button" class="speakbtn"style="width: 4rem; height:4rem ; border-radius:50%;position: relative; top:-9%;left:45%; background-color:  #68db65; font-family: cursive; font-size:0.5rem; font-weight: bolder;  border:none; 
+                cursor:pointer;" value="Start" id="lrbtn" >
+                 <audio  id="chirp">
+                    
+                    <source src="yesterday.mp3" type="audio/mpeg">
+                    
+                </audio>
+                 
+            </div>
+            <div id="nineteen" class="zero" flag="true">
+
+            </div>
+            <!--Questions for teachers/Reated Persons-->
+            <div id="twenty" class="zero" flag="true">
+                <h1 style="font-size: 1.3rem;position:relative;top:10%;text-align: center;"id="teach">Questions for Teacher/Relative of the kid</h1>
+                <input type="button" value="Get Started" id="Started">
+               
+            </div>
+            <div id="twentyone" class="one" one="hello" flag="true">
+                <h1 style="font-size:1.2rem;position:relative;top:5%;text-align: center;">Does the kid has difficulty to sit in one place</h1><br>
+                <input type="radio" name="sit"value="Yessit" id="ysit"/>
+                <label for="Yessit" style="font-size: 1rem;position: relative; top:-2%;left: 45%;">Yes</label><br><br>
+                <input type="radio" name="sit"value="Nosit" id="nsit"/>
+                <label for="Nosit" style="font-size: 1rem; position: relative;top:-5%;left:45%;">No</label>
+            </div>
+            <div id="twentytwo" class="zero" flag="true">
+                
+            </div>
+            <div id="twentythree" class="zero" flag="true">
+                
+            </div>
+        </div>
+        <button id="pbtn" class="flag" style="visibility: hidden;">
+            <i class="fa fa-caret-left" id="leftic"style=" visibility:visible; font-size:4.5rem;"></i>
+        </button>
+        <button id="btn" class="flag" style="visibility: hidden;">
+            <i class="fa fa-caret-right" id="rightic"style="font-size: 4.5rem; visibility: visible;"></i>
+        </button>
+    </body>
+    <script src="try.js"></script>
+
+</html>
